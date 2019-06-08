@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <head>
+      <meta charset="utf-8">
+      <li>
+      <%= link_to "Logout", destroy_user_session_path, class: "logout", class: "glyphicon glyphicon-log-out", method: :delete %>
+      </li>
+    </head>
     <%= yield %>
   </body>
 </html>
