@@ -2,9 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.photo {
-	width: 100%;
-	height: 500px;
-	background-image: image-url("photo1.jpg");
-	background-size: 100% 100%;
+.carousel-item {
+  background-size: 100% 100%;
+  position: relative;
 }
+
+.carousel-inner p,h1 {
+  position: absolute;
+  color: #f8f8ff;
+  font-weight: bold; /*太字に*/
+  font-family :Quicksand, sans-serif;
+  top: 50%;
+  left: 30%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 60px;
+  }
+
