@@ -10,12 +10,16 @@
   </head>
 
   <body>
-    <head>
-      <meta charset="utf-8">
-      <li>
-      <%= link_to "Logout", destroy_user_session_path, class: "logout", class: "glyphicon glyphicon-log-out", method: :delete %>
-      </li>
-    </head>
+    <header>
+      <div class="u-header">
+        <p class="u-header-text">古民家カフェ専門の検索・宣伝サイト　｜　Cafenavi KOMINKA</p>
+      </div>
+        <div>
+          <li>
+          <%= link_to "Logout", destroy_user_session_path, class: "logout", class: "glyphicon glyphicon-log-out", method: :delete %>
+          </li>
+        </div>
+    </header>
     <%= yield %>
   </body>
 </html>
