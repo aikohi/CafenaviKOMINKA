@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .carousel-item {
   background-size: 100% 100%;
   position: relative;
@@ -19,7 +20,7 @@
   text-align:center;
   color: #000;
   font-family :Quicksand, sans-serif;
-  top: 50%;
+  top: 45%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
@@ -29,3 +30,41 @@
   border-radius: 50%;
   }
 
+.index-button{
+    position: absolute;
+    color: #fff;
+    top: 85%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+}
+
+
+.about {
+  width:900px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.introduction {
+  width: 900px;
+  text-align: center;
+}
+
+.photo-panel{
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.photo {
+  margin-top: 80px;
+}
+
+.col-md-4 img {
+　width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
