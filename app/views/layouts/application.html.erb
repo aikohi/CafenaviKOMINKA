@@ -10,12 +10,52 @@
   </head>
 
   <body>
-    <head>
-      <meta charset="utf-8">
-      <li>
-      <%= link_to "Logout", destroy_user_session_path, class: "logout", class: "glyphicon glyphicon-log-out", method: :delete %>
-      </li>
-    </head>
+    <header>
+      <div class="u-header">
+        <p class="u-header-text">古民家カフェ専門の検索・宣伝サイト　｜　Cafenavi KOMINKA</p>
+      </div>
+      <div>
+          
+      </div>
+<!-----ハンバーガーボタン------------->
+      <div class="zdo_drawer_menu">
+           <div class="zdo_drawer_bg"></div>
+            <button type="button" class="zdo_drawer_button">
+              <span class="zdo_drawer_bar zdo_drawer_bar1"></span>
+              <span class="zdo_drawer_bar zdo_drawer_bar2"></span>
+              <span class="zdo_drawer_bar zdo_drawer_bar3"></span>
+             <!--<span class="zdo_drawer_menu_text zdo_drawer_text">MENU</span>-->
+              <span class="zdo_drawer_close zdo_drawer_text">CLOSE</span>
+            </button>
+            <nav class="zdo_drawer_nav_wrapper">
+              <ul class="zdo_drawer_nav">
+                <li>
+                    メニュー1
+                </li>
+                <li>
+                    メニュー2
+                </li>
+                <li>
+                    メニュー3
+                </li>
+                <li>
+                    メニュー4
+                </li>
+                <li>
+                    メニュー5
+                </li>
+                <li>
+                  <%= link_to "ログアウト", destroy_user_session_path, class: "logout", class: "glyphicon glyphicon-log-out", method: :delete %>
+                </li>
+              </ul>
+            </nav>
+      </div>
+<!---------------->
+    </header>
     <%= yield %>
+    <footer>
+        <p class="footer-text">Cafenavi KOMINKA</p>
+      </div>
+    </footer>
   </body>
 </html>
