@@ -48,7 +48,7 @@ class ShopsController < ApplicationController
   										 :holiday,
   										 :address,
   										 :phone_number,
-  										 :shop_image_id,
+  										 :shop_image,
   										 :user_id
   										 )
   end
