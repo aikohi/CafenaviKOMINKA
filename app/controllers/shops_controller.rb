@@ -1,6 +1,6 @@
 class ShopsController < ApplicationController
   def index
-  	@shops = Shop.all
+  	@shops = Shop.search(params[:search]) #検索機能
   end
 
   def show
@@ -49,7 +49,8 @@ class ShopsController < ApplicationController
   										 :address,
   										 :phone_number,
   										 :shop_image,
-  										 :user_id
+  										 :user_id,
+  										 :search
   										 )
   end
 
