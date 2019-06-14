@@ -1,4 +1,5 @@
-<section class="userinfo text-center"style="padding: 50px;">
+<section class="userinfo text-center">
+  <div class="info-panel">
 	<h2>会員情報変更</h2>
  		<%= form_for(@user) do |f| %>
 		　<div class="namelabel">
@@ -26,4 +27,5 @@
 
          <%= f.submit "情報を変更する",class: "btn btn-outline-secondary active" %>
 		<% end %>
+  </div>
 </section>

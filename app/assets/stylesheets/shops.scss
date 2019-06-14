@@ -1,0 +1,28 @@
+// Place all the styles related to the Shops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ /* shopsのnew・editで使用 */
+
+.forms {
+	padding-top: 60px;
+}
+
+.form-panel {
+  background: #fafafa;
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 500px;
+}
+
+ /* shops_index */
+
+.shop-index {
+	margin-top: 80px;
+}
+
+.search {
+	width: 380px;
+	padding: 35px;
+	margin: 0 auto;
+}
