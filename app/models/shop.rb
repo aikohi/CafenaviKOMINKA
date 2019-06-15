@@ -10,5 +10,7 @@ class Shop < ApplicationRecord
 	belongs_to :user
 	attachment :shop_image
   has_many :post_comments, dependent: :destroy
+  has_many :favorites, foreign_key: 'shop_id', dependent: :destroy #お気に入り
+  has_many :users, through: :favorites #お気に入り
 
 end

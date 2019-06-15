@@ -6,6 +6,7 @@ class ShopsController < ApplicationController
   def show
   	@shop = Shop.find(params[:id])
   	@post_comment = PostComment.new  #コメント機能
+  	@favorite = Favorite.new #お気に入り
   end
 
   def new
