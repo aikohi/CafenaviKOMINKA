@@ -317,7 +317,7 @@ footer {
 .balloon6 .faceicon {
   float: left;
   margin-right: -50px;
-   margin-left: 20px;
+  margin-left: 20px;
   width: 70px;
 }
 
@@ -331,6 +331,11 @@ footer {
   width: 100%;
   text-align: left;
 }
+
+.balloon6 .chatting a {
+  color: #276490;
+}
+
 .says {
   display: inline-block;
   position: relative;
