@@ -272,7 +272,7 @@ footer {
 }
 
 
-/*+++ Default Navigation CSS +++*/
+/*  ナビゲーション CSS  */
 
 .zdo_drawer_menu {
   .zdo_drawer_nav {
@@ -285,7 +285,7 @@ footer {
 }
 
 
-/*+++ Default Button Color +++*/
+/*  ボタン Color  */
 
 .zdo_drawer_menu {
   .zdo_drawer_button {
@@ -294,4 +294,65 @@ footer {
       background-color: #276490;
     }
   }
+}
+
+/* コメント */
+
+.line-bc {
+  font-size: 14px;
+
+}
+
+.comment {
+  margin-top: 20px 10px;
+  list-style: none;
+}
+
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -50px;
+   margin-left: 20px;
+  width: 70px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 70px;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 12px;
+  background: #acffa1;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #acffa1;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
 }
