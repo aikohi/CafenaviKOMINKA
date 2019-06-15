@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 resources :users, only: [:show, :edit, :update]
 
 resources :shops do
-	resource :post_comments, only: [:create, :destroy] #コメント機能
+	resources :post_comments, only: [:create,:destroy] #コメント機能
 end
 
 end

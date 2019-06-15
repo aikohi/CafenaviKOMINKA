@@ -25,7 +25,6 @@
 <div class="line-bc">
   <% @shop.post_comments.each do |post_comment| %>
    		<li class="comment">
-   		</style>
             <div class="comment-body bb">
                 <div class="comment-text">
                     <div class="comment-author clearfix">
@@ -34,10 +33,10 @@
                     </div>
                     <div class="balloon6">
                     	<div class="chatting">
-                          <div class="faceicon">
-                            <%= attachment_image_tag post_comment.user, :profile_image, fallback: "no_image.jpg" %>
-                          </div>
-        						      <div class="says">
+                          	<div class="faceicon">
+                             <%= attachment_image_tag post_comment.user, :profile_image, fallback: "no_image.jpg" %>
+                          	</div>
+        					<div class="says">
                       		  <%= post_comment.comment %>
                       		</div>
                     	</div>
@@ -45,5 +44,6 @@
                 </div>
             </div>
         </li>
+        <%= link_to "削除", shop_post_comment_path(@shop,post_comment), class: "btn btn-danger", method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
     <% end %>
 </div>
