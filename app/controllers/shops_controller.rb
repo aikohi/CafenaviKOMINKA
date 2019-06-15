@@ -5,6 +5,7 @@ class ShopsController < ApplicationController
 
   def show
   	@shop = Shop.find(params[:id])
+  	@post_comment = PostComment.new  #コメント機能
   end
 
   def new

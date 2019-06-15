@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :shops, dependent: :destroy
+  has_many :post_comments, dependent: :destroy #コメント機能
 
   attachment :profile_image
 

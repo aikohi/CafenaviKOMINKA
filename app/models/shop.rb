@@ -5,9 +5,10 @@ class Shop < ApplicationRecord
       else
         Shop.all
       end
-    end
+  end
 
 	belongs_to :user
 	attachment :shop_image
+  has_many :post_comments, dependent: :destroy
 
 end
