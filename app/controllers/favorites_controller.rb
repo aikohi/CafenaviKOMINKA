@@ -7,7 +7,7 @@ class FavoritesController < ApplicationController
   def create
   	user = current_user
   	shop = Shop.find(params[:shop_id])
-    Favorite.create(user_id: user.id,shop_id:shop.id)
+    Favorite.create(user_id:user.id,shop_id:shop.id)
     redirect_to shops_path
   end
 

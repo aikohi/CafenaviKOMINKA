@@ -31,10 +31,30 @@
 
 .shop-info {
 	margin: 0 auto;
-	width: 600px;
-	height: 500px;
+	width: 900px;
+	height: 900px;
 }
 
 .shpp-image {
 	margin-top: 200px;
+	float: left;
+	width: 400px;
+	height: 500px;
+}
+
+.address {
+	padding: 20px 0 20px 32px;
+}
+.text-column{
+	float: left;
+	width: 400px;
+	margin-top: 150px;
+	padding: 50px;
+}
+.shop-title {
+	padding: 20px;
+}
+
+.comment{
+	margin: 20px;
 }
