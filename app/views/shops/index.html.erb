@@ -19,9 +19,9 @@
                     <% end %>
                     <p class="card-text"><%= shop.introduction %></p>
                     <% if !Favorite.exists?(user_id:current_user.id,shop_id:shop.id) %>
-                    <%= link_to "お気に入り",shop_favorites_path(shop),method: :post %>
+                    <%= link_to "お気に入り登録",shop_favorites_path(shop),method: :post,class: "btn-outline-warning" %>
                     <% else %>
-                    <%= link_to "お気に入り解除",shop_favorites_path(shop),method: :delete %>
+                    <%= link_to "お気に入り解除",shop_favorites_path(shop),method: :delete, class: "btn-outline-success" %>
                     <% end %>
                   </div>
               </div>

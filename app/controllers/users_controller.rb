@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show
   	 @user = User.find(params[:id])
      @shops = Shop.where(user_id: params[:id])
@@ -6,9 +7,8 @@ class UsersController < ApplicationController
 
   def edit
   	 @user = User.find(params[:id])
-     @shop = Shop.find(params[:id])
   end
-  end
+
 
   def update
   	@user = User.find(params[:id])
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
 
   private
-def user_params
-    params.require(:user).permit(:name, :profile_image)
+    def user_params
+        params.require(:user).permit(:name, :profile_image)
+    end
 end
-

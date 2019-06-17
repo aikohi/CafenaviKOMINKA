@@ -8,7 +8,7 @@
    		  </div>
 
     	<div class="imagelabel">
-    		<%= attachment_image_tag @user, :profile_image,:fill, 30, 30,fallback: "no_image.png", size:'100x100' %>
+    		<%= attachment_image_tag @user, :profile_image, size:'100x100',fallback: "no_image.png" %>
      		<label class="control-label sr-only">プロフィール画像変更</label>
     		<%= f.attachment_field :profile_image, class: "user_image", placeholder: "ファイルを選択" %>
     	</div><br>
