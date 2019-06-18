@@ -17,8 +17,12 @@
       <div class="main-menu">
         <nav>
           <ul>
+            <li class="f-left"><%= link_to image_tag("logo.png",:size =>'200x30'), root_path %></li>
+            <li></li>
             <li><%= link_to "古民家カフェを探す", shops_path %></li>
-            <li><%= link_to  user_favorites_path(@user.id) do %><%= current_user.name %>さんのお気に入り</li>
+            <% if user_signed_in? %>
+            <li><%= link_to  user_favorites_path(current_user) do %><%= current_user.name %>さんのお気に入り</li>
+             <% end %>
              <% end %>
             <li><%= link_to "古民家カフェを宣伝する", new_shop_path %></li>
           </ul>
@@ -38,7 +42,7 @@
               <ul class="zdo_drawer_nav">
                <% if user_signed_in? %>
                 <li>
-                    <%= link_to "プロフィール変更", edit_user_path(@user.id) %>
+                    <%= link_to "プロフィール変更", edit_user_path(current_user) %>
                 </li>
                 <li>
                     <%= link_to '宣伝中のカフェ', user_path(current_user.id) %>

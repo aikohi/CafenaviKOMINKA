@@ -1,6 +1,7 @@
 class ShopsController < ApplicationController
   def index
   	@shops = Shop.search(params[:search]) #検索機能
+    @user = current_user
   end
 
   def show
@@ -11,6 +12,7 @@ class ShopsController < ApplicationController
 
   def new
   	@shop = Shop.new
+    @user = current_user
   end
 
   def create
@@ -32,8 +34,8 @@ class ShopsController < ApplicationController
 
   def destroy
   	@shop = Shop.find(params[:id])
-	@shop.destroy
-	redirect_to shops_path
+	  @shop.destroy
+	  redirect_to shops_path
   end
 
   private

@@ -10,8 +10,10 @@ class PostCommentsController < ApplicationController
 
 	def destroy
 	  	comment = PostComment.find(params[:id])
-		comment.destroy
-		redirect_to shop_path(comment.shop)
+	  	if @post_comment.user_id = current_user
+			comment.destroy
+			redirect_to shop_path(comment.shop)
+	    end
   	end
 
 	private

@@ -139,8 +139,13 @@ header {
 }
 
 .main-menu nav{
-  padding: 18px;
+  display: flex;
+  padding: 17px;
   text-align: center;
+}
+
+.f-right {
+  margin-left: auto;
 }
 
 .main-menu nav li {
