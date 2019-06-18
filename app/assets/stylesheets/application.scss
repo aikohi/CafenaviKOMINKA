@@ -138,6 +138,22 @@ header {
   font-size: 12px;
 }
 
+.main-menu nav{
+  padding: 18px;
+  text-align: center;
+}
+
+.main-menu nav li {
+  display: inline;
+  margin-right: 5em;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.main-menu li a{
+  color: #433d3c;
+}
+
 /* フッター */
 
 footer {

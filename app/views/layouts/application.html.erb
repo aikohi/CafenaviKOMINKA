@@ -14,8 +14,15 @@
       <div class="u-header">
         <p class="u-header-text">古民家カフェ専門の検索・宣伝サイト　｜　Cafenavi KOMINKA</p>
       </div>
-      <div>
-        
+      <div class="main-menu">
+        <nav>
+          <ul>
+            <li><%= link_to "古民家カフェを探す", shops_path %></li>
+            <li><%= link_to  user_favorites_path(@user.id) do %><%= current_user.name %>さんのお気に入り</li>
+             <% end %>
+            <li><%= link_to "古民家カフェを宣伝する", new_shop_path %></li>
+          </ul>
+        </nav>
       </div>
 <!-----ハンバーガーボタン------------->
       <div class="zdo_drawer_menu">
