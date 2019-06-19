@@ -1,4 +1,5 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!, except: [:index,:show]
   def index
   	@shops = Shop.search(params[:search]) #検索機能
     @user = current_user
