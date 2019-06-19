@@ -138,6 +138,27 @@ header {
   font-size: 12px;
 }
 
+.main-menu nav{
+  display: flex;
+  padding: 17px;
+  text-align: center;
+}
+
+.f-right {
+  margin-left: auto;
+}
+
+.main-menu nav li {
+  display: inline;
+  margin-right: 5em;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.main-menu li a{
+  color: #433d3c;
+}
+
 /* フッター */
 
 footer {
@@ -278,8 +299,8 @@ footer {
   .zdo_drawer_nav {
     padding: 100px 24px;
     li {
-      font-size: 16px;
-      margin-bottom: 15px;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
   }
 }

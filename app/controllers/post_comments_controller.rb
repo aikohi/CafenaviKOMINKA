@@ -9,8 +9,8 @@ class PostCommentsController < ApplicationController
 	end
 
 	def destroy
-	  	comment = PostComment.find(params[:id])
-		comment.destroy
+	  	post_comment = PostComment.find(params[:id])
+		post_comment.destroy
 		redirect_to shop_path(comment.shop)
   	end
 
@@ -21,5 +21,4 @@ class PostCommentsController < ApplicationController
 	                      :shop_id,
 	                      :comment)
 	end
-
 end

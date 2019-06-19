@@ -1,15 +1,18 @@
 class ShopsController < ApplicationController
   def index
   	@shops = Shop.search(params[:search]) #検索機能
+    @user = current_user
   end
 
   def show
   	@shop = Shop.find(params[:id])
   	@post_comment = PostComment.new  #コメント機能
+  	@favorite = Favorite.new #お気に入り
   end
 
   def new
   	@shop = Shop.new
+    @user = current_user
   end
 
   def create
@@ -31,8 +34,8 @@ class ShopsController < ApplicationController
 
   def destroy
   	@shop = Shop.find(params[:id])
-	@shop.destroy
-	redirect_to shops_path
+	  @shop.destroy
+	  redirect_to shops_path
   end
 
   private

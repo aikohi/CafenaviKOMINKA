@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_many :shops, dependent: :destroy
   has_many :post_comments, dependent: :destroy #コメント機能
+  has_many :favorites, through: :favorites, source: :shop #お気に入り,
+    #has_many :favposts, through: :favorites, source: :shop #お気に入り
 
   attachment :profile_image
 
