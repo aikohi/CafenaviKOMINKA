@@ -11,9 +11,4 @@ class Admin::UsersController < ApplicationController
 	    redirect_to admin_users_path
     end
 
-	private
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
-
 end

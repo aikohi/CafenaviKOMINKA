@@ -5,18 +5,13 @@ class Admin::ShopsController < ApplicationController
   end
 
   def destroy
-  	  @shop = Shop.find(params[:id])
+    @shop = Shop.find(params[:id])
 	  @shop.destroy
 	  redirect_to admin_shops_path
   end
 
   private
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
-
     def shop_params
   			params.require(:shop).permit(:search)
   	end
-
 end

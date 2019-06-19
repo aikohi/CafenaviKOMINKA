@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    get 'shops/index'
-  end
   get 'favorites/index'
   devise_for :users
   root 'tops#index'
