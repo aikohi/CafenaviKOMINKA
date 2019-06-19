@@ -10,7 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_101548) do
+ActiveRecord::Schema.define(version: 2019_06_15_093534) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_favorites_on_shop_id"
+    t.index ["user_id", "shop_id"], name: "index_favorites_on_user_id_and_shop_id", unique: true
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "post_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "user_id"
+    t.integer "shop_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "shop_name"
+    t.string "introduction"
+    t.string "first_menu"
+    t.integer "first_price"
+    t.string "second_menu"
+    t.integer "second_price"
+    t.string "start_time"
+    t.string "last_time"
+    t.string "holiday"
+    t.string "address"
+    t.integer "phone_number"
+    t.string "shop_image_id"
+    t.integer "user_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

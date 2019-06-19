@@ -1,0 +1,95 @@
+// Place all the styles related to the Shops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ /* shopsのnew・editで使用 */
+
+.forms {
+	padding-top: 20px;
+}
+
+.form-panel {
+  background: #fafafa;
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 500px;
+}
+
+ /* shops_index */
+
+.search {
+	width: 380px;
+	padding: 35px;
+	margin: 0 auto;
+}
+
+/* shops_show */
+
+.shop-info {
+	margin: 0 auto;
+	width: 900px;
+	height: 900px;
+}
+
+.shpp-image {
+	margin-top: 100px;
+	float: left;
+	width: 460px;
+	height: 590px;
+}
+
+.address {
+	padding: 20px 0 20px 32px;
+}
+.text-column{
+	float: left;
+	width: 400px;
+	margin-top: 23px;
+	padding: 65px;
+}
+.shop-title {
+	padding: 15px 20px;
+	font-size: 25px;
+}
+
+.shop-introduction {
+	padding: 0 20px 20px 20px;
+}
+
+.text-column p {
+	color: #ff69b4;
+	padding: 20px 20px 0 20px;
+	font-size: 20px;
+}
+
+.menu {
+	width: 300px;
+	height: 30px;
+	padding: 0 20px 10px 20px;
+}
+
+.menu-title {
+	width: 100px;
+	float: left;
+}
+.price {
+	float: left;
+	margin-left: 30px;
+}
+
+.business-time {
+	padding: 0 20px;
+}
+
+.holiday {
+	padding: 0 20px;
+}
+
+.favorite-button {
+	padding: 30px;
+	font-size: 22px;
+}
+
+.comment{
+	margin: 20px;
+}
