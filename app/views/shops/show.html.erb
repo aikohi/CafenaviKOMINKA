@@ -58,8 +58,10 @@
           					　　　　　<div class="says">
                         		  <%= post_comment.comment %>
                         		</div>
-                        		<% if user_signed_in? && current_user.id  == post_comment.user_id%>
+                        		<% if user_signed_in? && current_user.id == post_comment.user_id%>
                         		<%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
+                            <% elsif user_signed_in? && current_user.admin %>
+                            <%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
                         		<% end %>
                       	</div>
                       </div>
