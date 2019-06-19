@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'shops/index'
+  end
   get 'favorites/index'
   devise_for :users
   root 'tops#index'
@@ -7,6 +10,10 @@ Rails.application.routes.draw do
 	resources :users, only: [:show, :edit, :update] do
 		resources :favorites, only: [:index]  #お気に入り
 	end
+
+	namespace :admin do
+    resources :users, only: [:index,:destroy]
+  	end
 
 	resources :shops do
 		resources :post_comments, only: [:create,:destroy] #コメント機能
