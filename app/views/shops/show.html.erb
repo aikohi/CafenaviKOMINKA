@@ -25,7 +25,6 @@
              <% if !Favorite.exists?(user_id:current_user.id, shop_id:@shop.id) %>
                 <%= link_to "お気に入り登録",shop_favorites_path(@shop),method: :post,class: "btn-warning" %>
              <% else %>
-                <%= link_to "お気に入り解除",shop_favorites_path(@shop),method: :delete, class: "btn-success" %>
             <% end %>
           <% end %>
         </div>
@@ -60,6 +59,8 @@
                         		</div>
                         		<% if user_signed_in? && current_user.id == post_comment.user_id%>
                         		<%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
+                            <% elsif user_signed_in? && current_user.admin %>
+                            <%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
                         		<% end %>
                       	</div>
                       </div>

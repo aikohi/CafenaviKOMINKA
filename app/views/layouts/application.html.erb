@@ -40,16 +40,25 @@
             <nav class="zdo_drawer_nav_wrapper">
               <ul class="zdo_drawer_nav">
                <% if user_signed_in? %>
-                <li>
-                    <%= link_to "プロフィール変更", edit_user_path(current_user) %>
-                </li>
-                <li>
-                    <%= link_to '宣伝中のカフェ', user_path(current_user.id) %>
-                </li>
-                <li>
-                    <%= link_to "ログアウト", destroy_user_session_path, class: "glyphicon glyphicon-log-out", method: :delete %>
-                </li>
-              <% else %>
+                    <li>
+                        <%= link_to "プロフィール変更", edit_user_path(current_user) %>
+                    </li>
+                    <li>
+                        <%= link_to '宣伝中のカフェ', user_path(current_user.id) %>
+                    </li>
+
+                     <% if current_user.admin == true %>
+                        <li>
+                          <%= link_to '会員一覧', admin_users_path %>
+                        </li>
+                        <li>
+                          <%= link_to "サイト内全カフェ一覧", admin_shops_path %>
+                        </li>
+                     <% end %>
+                    <li>
+                        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    </li>
+               <% else %>
                 <li>
                     <%= link_to "新規会員登録", new_user_registration_path %>
                 </li>
@@ -62,6 +71,7 @@
       </div>
 <!---------------->
     </header>
+    <div class="header-padding"></div>
     <%= yield %>
     <footer>
         <p class="footer-text">Cafenavi KOMINKA</p>

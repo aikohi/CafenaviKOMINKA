@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
    before_action :authenticate_user!
   def index
-  	@favorites = Favorite.all
+  	@favorites = Favorite.where(user_id: current_user)
     @user = current_user
   end
 
@@ -9,14 +9,14 @@ class FavoritesController < ApplicationController
   	user = current_user
   	shop = Shop.find(params[:shop_id])
     Favorite.create(user_id:user.id,shop_id:shop.id)
-    redirect_to shops_path
+    redirect_to user_favorites_path(current_user)
   end
 
   def destroy
   	user = current_user
   	shop = Shop.find(params[:shop_id])
     favorite = Favorite.find_by(user_id: user.id,shop_id:shop.id)
-    favorite.delete
+    favorite.destroy
     redirect_to user_favorites_path(current_user)
   end
 
