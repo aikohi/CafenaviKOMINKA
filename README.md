@@ -4,6 +4,10 @@
 With "CafenaviKOMINKA", you can search and advertise "Kominka Cafe" in Japan.   
 "CafenaviKOMINKA"を使用すると、日本の「古民家カフェ」を検索、宣伝ができます。
 
+## Table of Contents
+- [Description](#Description)
+- [Usage](#usage)
+
 ## Description
 「KOMINKA」 is a Japanese house that has been built for quite a while.It is also known as a traditional Japanese house.  
 The old house is a building made of wood combination and earthen wall.It has the advantage of being easy to reproduce.  
