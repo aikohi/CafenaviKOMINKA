@@ -3,6 +3,18 @@
   		<%= attachment_image_tag @shop, :shop_image, size:'200x300',class: "card-img-top",fallback: "no_image.png"%>
     		<div class="address">住所 : <%= @shop.address %></div>
     		<div class="phone-number">電話番号 : <%= @shop.phone_number %></div>
+<!---GMAPAPI導入予定------------------>
+        <div id="shop-map"></div>
+          <script>
+            function initMap(){
+              let map = new google.maps.Map(document.getElementById('shop-map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 20
+              });
+            }
+            </script>
+          <script src="//maps.googleapis.com/maps/api/js?key=ENV['GMAP_KEY']"></script>
+<!---GMAPAPI導入予定------------------>
   	</div>
     <div class="text-column">
       	<div class="shop-title"><%= @shop.shop_name %></div>
@@ -31,6 +43,7 @@
     </div>
 </div>
 <div class="comment">
+  <% if user_signed_in? %>
   <%= form_for [@shop, @post_comment] do |f| %>
       <div class="row">
           <div class="col-sm-12">
@@ -39,7 +52,7 @@
       </div>
       <%= f.submit "コメント送信", class: "btn btn-secondary" %>
   <% end %>
-
+  <% end %>
   <div class="line-bc">
     <% @shop.post_comments.each do |post_comment| %>
      		<li class="comment">

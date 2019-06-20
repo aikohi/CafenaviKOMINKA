@@ -4,8 +4,12 @@ class PostCommentsController < ApplicationController
 		shop = Shop.find(params[:shop_id])
 	    comment = current_user.post_comments.new(post_comment_params)
 	    comment.shop_id = shop.id
-	    comment.save
-	    redirect_to shop_path(shop)
+	    if comment.save
+	       redirect_to shop_path(shop)
+	    else
+	       redirect_to shop_path(comment.shop)
+	    end
+
 	end
 
 	def destroy

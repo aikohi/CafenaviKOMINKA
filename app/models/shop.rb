@@ -13,4 +13,18 @@ class Shop < ApplicationRecord
   has_many :favorites, foreign_key: 'shop_id', dependent: :destroy #お気に入り
   has_many :users, through: :favorites #お気に入り
 
+  with_options presence: true do
+    validates :shop_name
+    validates :introduction
+    validates :first_menu
+    validates :first_price
+    validates :second_menu
+    validates :second_price
+    validates :start_time
+    validates :last_time
+    validates :holiday
+    validates :address
+    validates :phone_number
+  end
+
 end
