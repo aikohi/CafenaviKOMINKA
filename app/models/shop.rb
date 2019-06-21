@@ -3,7 +3,7 @@ class Shop < ApplicationRecord
       if search
         Shop.where(['address LIKE ?', "%#{search}%"])#titleの部分に検索したい部分一致のカラムを入れる
       else
-        Shop.all
+        Shop.all.order(created_at: :desc)
       end
   end
 

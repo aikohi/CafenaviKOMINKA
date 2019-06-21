@@ -43,7 +43,7 @@
     </div>
 </div>
 <div class="comment">
-  <% if user_signed_in? %>
+
   <%= form_for [@shop, @post_comment] do |f| %>
       <div class="row">
           <div class="col-sm-12">
@@ -52,7 +52,7 @@
       </div>
       <%= f.submit "コメント送信", class: "btn btn-secondary" %>
   <% end %>
-  <% end %>
+
   <div class="line-bc">
     <% @shop.post_comments.each do |post_comment| %>
      		<li class="comment">

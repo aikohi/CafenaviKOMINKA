@@ -14,8 +14,7 @@
  *= require_self
  */
  @import "bootstrap";
- @import "slick-theme";
- @import "slick";
+
 
  /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
@@ -364,7 +363,7 @@ footer {
   padding: 10px;
   max-width: 500px;
   border-radius: 12px;
-  background: #acffa1;
+  background: #fbfbfb;
 }
 
 .says:after {
@@ -374,7 +373,7 @@ footer {
   top: 5px;
   left: -19px;
   border: 8px solid transparent;
-  border-right: 18px solid #acffa1;
+  border-right: 18px solid #fbfbfb;
   -webkit-transform: rotate(35deg);
   transform: rotate(35deg);
 }
@@ -383,3 +382,41 @@ footer {
   padding: 0;
 }
 
+/*  店一覧・お気に入り一覧のリボン見出し  */
+
+.card-address {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 3px;
+  padding-left: 23px;
+  margin: 0 0 0 -40px;
+  width: calc(100%);
+  font-size: 18px;
+  color: white;
+  background: #f57a78;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-address:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 14px transparent;
+  border-right: solid 20px #cc6664;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.card-title {
+  padding: 18px;
+}
+
+.card-title a {
+  color: #535353;
+  font-size: 22px;
+}
