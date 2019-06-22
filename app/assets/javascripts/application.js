@@ -12,13 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require rails-ujs
 //= require activestorage
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).on('turbolinks:load',function() {
+$(document).on('ready page:load',function() {
 	$(function () {
 		$('.zdo_drawer_button').click(function () {
 			$(this).toggleClass('active');
@@ -31,4 +31,14 @@ $(document).on('turbolinks:load',function() {
 			$('nav').removeClass('open');
 		});
 	})
+	$(function () {
+		$('.carousel-item active').carousel({
+		  interval: 3000
+		})
+	});
+	$(function () {
+		$('.carousel-item').carousel({
+		  interval: 3000
+		})
+	});
 });

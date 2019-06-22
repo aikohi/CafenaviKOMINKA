@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/*  トップページ   */
+
 .carousel-item {
   background-size: 100% 100%;
   position: relative;
@@ -54,7 +56,7 @@
 }
 
 .photo-panel{
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
@@ -63,8 +65,9 @@
   margin-top: 80px;
 }
 
-.col-md-4 img {
+.col-ld-4 img {
 　width: 200px;
   height: 200px;
+  margin: 18px;
   border-radius: 50%;
 }

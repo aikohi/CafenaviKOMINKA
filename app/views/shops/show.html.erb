@@ -1,8 +1,18 @@
 <div class="shop-info">
   	<div class="shpp-image">
   		<%= attachment_image_tag @shop, :shop_image, size:'200x300',class: "card-img-top",fallback: "no_image.png"%>
-    		<div class="address">住所 : <%= @shop.address %></div>
-    		<div class="phone-number">電話番号 : <%= @shop.phone_number %></div>
+        <table class="custom_tb">
+          <tbody>
+            <tr>
+              <th>住所</th>
+              <td><%= @shop.address %></td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td><%= @shop.phone_number %></td>
+            </tr>
+          </tbody>
+        </table>
 <!---GMAPAPI導入予定------------------>
         <div id="shop-map"></div>
           <script>
@@ -19,7 +29,7 @@
     <div class="text-column">
       	<div class="shop-title"><%= @shop.shop_name %></div>
       	<div class="shop-introduction"><%= @shop.introduction %></div>
-      <p>おすすめメニュー</p>
+      <p><i class="far fa-check-circle"></i></i>おすすめメニュー</p>
       	<div class="menu">
           <div class="menu-title"><%= @shop.first_menu %></div>
           <div class="price"><%= @shop.first_price %>円(税抜き)</div>
@@ -28,9 +38,9 @@
           <div class="menu-title"><%= @shop.second_menu %></div>
           <div class="price"><%= @shop.second_price %>円(税抜き)</div>
         </div>
-        <p>営業時間</p>
+        <p><i class="far fa-check-circle"></i></i>営業時間</p>
         <div class="business-time"><%= @shop.start_time %> ~ <%= @shop.last_time %></div>
-        <p>定休日</p>
+        <p><i class="far fa-check-circle"></i></i>定休日</p>
         <div class="holiday"><%= @shop.holiday %></div>
         <div class="favorite-button">
           <% if user_signed_in? %>
@@ -43,7 +53,7 @@
     </div>
 </div>
 <div class="comment">
-  <% if user_signed_in? %>
+
   <%= form_for [@shop, @post_comment] do |f| %>
       <div class="row">
           <div class="col-sm-12">
@@ -52,7 +62,7 @@
       </div>
       <%= f.submit "コメント送信", class: "btn btn-secondary" %>
   <% end %>
-  <% end %>
+
   <div class="line-bc">
     <% @shop.post_comments.each do |post_comment| %>
      		<li class="comment">

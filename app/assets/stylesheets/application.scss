@@ -14,8 +14,7 @@
  *= require_self
  */
  @import "bootstrap";
- @import "slick-theme";
- @import "slick";
+
 
  /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
@@ -112,6 +111,7 @@ form {
   border-bottom: 1px dotted #8c8c8c;
 }
 
+
 /* ヘッダー */
 
 header {
@@ -158,6 +158,7 @@ header {
   padding:40px 0;
 }
 
+
 /* フッター */
 
 footer {
@@ -173,6 +174,7 @@ footer {
 
 
 /* ハンバーガーメニュー */
+
 .zdo_drawer_menu {
   * {
     margin: 0;
@@ -318,7 +320,7 @@ footer {
   }
 }
 
-/* コメント */
+/* コメントの吹き出しデザイン */
 
 .line-bc {
   font-size: 14px;
@@ -364,7 +366,7 @@ footer {
   padding: 10px;
   max-width: 500px;
   border-radius: 12px;
-  background: #acffa1;
+  background: #fbfbfb;
 }
 
 .says:after {
@@ -374,7 +376,7 @@ footer {
   top: 5px;
   left: -19px;
   border: 8px solid transparent;
-  border-right: 18px solid #acffa1;
+  border-right: 18px solid #fbfbfb;
   -webkit-transform: rotate(35deg);
   transform: rotate(35deg);
 }
@@ -383,3 +385,109 @@ footer {
   padding: 0;
 }
 
+
+
+
+
+/*  店・お気に入り一覧、users/showのリボン見出し  */
+
+.favorite-user-name {     /* お気に入り一覧 のユーザーネーム */
+  padding: 0 0 20px 80px;
+  margin-top: 50px;
+}
+
+.card-address {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 3px;
+  padding-left: 23px;
+  margin: 0 0 0 -40px;
+  width: calc(100%);
+  font-size: 18px;
+  color: white;
+  background: #f57a78;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-address:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 14px transparent;
+  border-right: solid 20px #cc6664;
+}
+
+i {
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.card-title {
+  padding: 18px;
+}
+
+.card-title a {
+  color: #535353;
+  font-size: 22px;
+}
+
+
+
+
+@media screen and (max-width:768px) {   /*  レスポンシブ対応  */
+
+header {
+    width: 100%;
+  }
+
+.carousel-item img {
+  width: 768px;
+  height:750px;
+}
+
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item a {
+  display: block;
+  width:100%;
+}
+
+.carousel-item .show-image {
+  display: block;
+  width:100%;
+}
+.logo h1 {
+  font-size: 60px;
+  font-weight: bold; /*太字に*/
+}
+
+
+.about {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #1a1a1a;
+}
+
+.introduction {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.photo-panel{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.photo {
+  margin-top: 40px;
+  padding: 50px;
+}
+}
