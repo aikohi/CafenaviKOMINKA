@@ -433,3 +433,61 @@ i {
   color: #535353;
   font-size: 22px;
 }
+
+
+
+
+@media screen and (max-width:768px) {   /*  レスポンシブ対応  */
+
+header {
+    width: 100%;
+  }
+
+.carousel-item img {
+  width: 768px;
+  height:750px;
+}
+
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item a {
+  display: block;
+  width:100%;
+}
+
+.carousel-item .show-image {
+  display: block;
+  width:100%;
+}
+.logo h1 {
+  font-size: 60px;
+  font-weight: bold; /*太字に*/
+}
+
+
+.about {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #1a1a1a;
+}
+
+.introduction {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.photo-panel{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.photo {
+  margin-top: 40px;
+  padding: 50px;
+}
+}
