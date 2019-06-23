@@ -76,3 +76,6 @@ gem "refile-mini_magick"
 gem 'dotenv-rails'
 # 論理削除用
 gem 'paranoia'
+#googleapiに使用
+gem 'geocoder'
+
