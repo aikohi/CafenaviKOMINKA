@@ -15,7 +15,7 @@ before_action :authenticate_user!
 	def destroy
 	  	post_comment = PostComment.find(params[:id])
 		post_comment.destroy
-		redirect_to shop_path(comment.shop)
+		redirect_to shop_path(post_comment.shop)
   	end
 
 	private
