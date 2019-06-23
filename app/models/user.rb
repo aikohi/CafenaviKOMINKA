@@ -10,6 +10,10 @@ class User < ApplicationRecord
   has_many :favorites, through: :favorites, source: :shop #お気に入り,
     #has_many :favposts, through: :favorites, source: :shop #お気に入り
 
+
+    validates :name, presence: true, uniqueness: true
+    validates :email, uniqueness: true
+
   attachment :profile_image
 
 end

@@ -1,4 +1,5 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!, except: [:index,:show]
   def index
   	@shops = Shop.search(params[:search]) #検索機能
     @user = current_user
@@ -10,6 +11,12 @@ class ShopsController < ApplicationController
   	@favorite = Favorite.new #お気に入り
   end
 
+  def search_location
+        latitude = params[:latitude].to_f
+        longitude = params[:longitude].to_f
+        @locations = Shop.within_box(0.310686, latitude, longitude)
+end
+
   def new
   	@shop = Shop.new
     @user = current_user
@@ -18,8 +25,12 @@ class ShopsController < ApplicationController
   def create
   	@shop = Shop.new(shop_params)
   	@shop.user_id = current_user.id
-  	@shop.save
-  	redirect_to shops_path
+    @shop.address = @shop.address.gsub(/\d+/, "").gsub(/\-+/, "")
+  	if @shop.save
+  	   redirect_to shops_path
+    else
+       render :new
+    end
   end
 
   def edit
@@ -28,8 +39,11 @@ class ShopsController < ApplicationController
 
   def update
   	@shop = Shop.find(params[:id])
-    @shop.update(shop_params)
-    redirect_to shop_path(@shop.id)
+    if @shop.update(shop_params)
+       redirect_to shop_path(@shop.id)
+    else
+       render :edit
+    end
   end
 
   def destroy
