@@ -144,10 +144,12 @@ header {
 }
 
 .main-menu nav li {
+  font-family: "メイリオ", Meiryo, sans-serif;
   display: inline;
   margin-right: 5em;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .main-menu li a{
@@ -172,10 +174,148 @@ footer {
   color: #fff;
 }
 
+/* コメントの吹き出しデザイン */
+
+.line-bc {
+  font-size: 14px;
+
+}
+
+.comment {
+  margin-top: 20px 10px;
+  list-style: none;
+}
+
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -50px;
+  margin-left: 20px;
+  width: 70px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+
+.balloon6 .chatting a {
+  color: #276490;
+}
+
+.says {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 12px;
+  background: #fbfbfb;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #fbfbfb;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/*  店・お気に入り一覧、users/showのリボン見出し  */
+
+.favorite-user-name {     /* お気に入り一覧 のユーザーネーム */
+  padding: 0 0 20px 80px;
+  margin-top: 50px;
+}
+
+.card-address {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 3px;
+  padding-left: 23px;
+  margin: 0 0 0 -40px;
+  width: calc(100%);
+  font-size: 18px;
+  color: white;
+  background: #f57a78;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-address:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 14px transparent;
+  border-right: solid 20px #cc6664;
+}
+
+i {
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.card-title {
+  padding: 18px;
+}
+
+.card-title a {
+  color: #535353;
+  font-size: 22px;
+}
+
+
+/* ハンバーガーメニュー 画面768px以上は表示しない*/
+
+@media only screen and (min-width:768px){
+  .zdo_drawer_menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width:768px) {   /*  レスポンシブ対応  */
+
+header {
+  width: 100%;
+  font-size: 12px;
+  }
+
+.main-menu nav li:nth-child(1){
+  display: block !important;
+  }
+
+.main-menu nav li{
+  display: none !important;
+  }
 
 /* ハンバーガーメニュー */
 
 .zdo_drawer_menu {
+    display: block !important;
   * {
     margin: 0;
     padding: 0;
@@ -320,129 +460,6 @@ footer {
   }
 }
 
-/* コメントの吹き出しデザイン */
-
-.line-bc {
-  font-size: 14px;
-
-}
-
-.comment {
-  margin-top: 20px 10px;
-  list-style: none;
-}
-
-.balloon6 {
-  width: 100%;
-  margin: 10px 0;
-  overflow: hidden;
-}
-
-.balloon6 .faceicon {
-  float: left;
-  margin-right: -50px;
-  margin-left: 20px;
-  width: 70px;
-}
-
-.balloon6 .faceicon img{
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.balloon6 .chatting {
-  width: 100%;
-  text-align: left;
-}
-
-.balloon6 .chatting a {
-  color: #276490;
-}
-
-.says {
-  display: inline-block;
-  position: relative;
-  padding: 10px;
-  max-width: 500px;
-  border-radius: 12px;
-  background: #fbfbfb;
-}
-
-.says:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 5px;
-  left: -19px;
-  border: 8px solid transparent;
-  border-right: 18px solid #fbfbfb;
-  -webkit-transform: rotate(35deg);
-  transform: rotate(35deg);
-}
-.says p {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-/*  店・お気に入り一覧、users/showのリボン見出し  */
-
-.favorite-user-name {     /* お気に入り一覧 のユーザーネーム */
-  padding: 0 0 20px 80px;
-  margin-top: 50px;
-}
-
-.card-address {
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  padding: 3px;
-  padding-left: 23px;
-  margin: 0 0 0 -40px;
-  width: calc(100%);
-  font-size: 18px;
-  color: white;
-  background: #f57a78;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.card-address:before {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 14px transparent;
-  border-right: solid 20px #cc6664;
-}
-
-i {
-  margin-right: 5px;
-  padding-left: 5px;
-}
-
-.card-title {
-  padding: 18px;
-}
-
-.card-title a {
-  color: #535353;
-  font-size: 22px;
-}
-
-
-
-
-@media screen and (max-width:768px) {   /*  レスポンシブ対応  */
-
-header {
-    width: 100%;
-  }
-
 .carousel-item img {
   width: 768px;
   height:750px;
@@ -463,31 +480,22 @@ header {
 }
 .logo h1 {
   font-size: 60px;
-  font-weight: bold; /*太字に*/
 }
-
 
 .about {
   width: 100%;
-  margin: 0 auto;
   margin-top: 20px;
-  color: #1a1a1a;
 }
 
 .introduction {
   width: 100%;
-  text-align: center;
-  padding: 20px;
 }
 
 .photo-panel{
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 100px;
 }
 
 .photo {
-  margin-top: 40px;
   padding: 50px;
 }
 }
