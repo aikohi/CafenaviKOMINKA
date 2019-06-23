@@ -1,5 +1,5 @@
 <div class="shop-info">
-  	<div class="shpp-image">
+  	<div class="shop-image">
   		<%= attachment_image_tag @shop, :shop_image, size:'200x300',class: "card-img-top",fallback: "no_image.png"%>
         <table class="custom_tb">
           <tbody>
@@ -15,15 +15,9 @@
         </table>
 <!---GMAPAPI導入予定------------------>
         <div id="shop-map"></div>
-          <script>
-            function initMap(){
-              let map = new google.maps.Map(document.getElementById('shop-map'), {
-              center: {lat: -34.397, lng: 150.644},
-              zoom: 20
-              });
-            }
-            </script>
-          <script src="//maps.googleapis.com/maps/api/js?key=ENV['GMAP_KEY']"></script>
+
+
+          
 <!---GMAPAPI導入予定------------------>
   	</div>
     <div class="text-column">
@@ -93,3 +87,24 @@
       <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+    function initMap(){
+      const myLatLng = {lat: <%= @shop.latitude %>, lng: <%= @shop.longitude %>}; //変数をここで定義
+      let map = new google.maps.Map(document.getElementById('shop-map'),{
+        center: myLatLng,
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map
+      });
+    }
+
+</script>
+<script src="//maps.googleapis.com/maps/api/js?key=<%= ENV['GMAP_KEY']%>&callback=initMap"></script>
+
+
+
+
+
