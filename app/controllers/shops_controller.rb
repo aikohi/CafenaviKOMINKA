@@ -25,7 +25,7 @@ end
   def create
   	@shop = Shop.new(shop_params)
   	@shop.user_id = current_user.id
-    @shop.address = @shop.address.gsub(/\d+/, "").gsub(/\-+/, "")
+    @shop.address = @shop.address.gsub(/\d+/, "").gsub(/\-+/, "") #GMAP
   	if @shop.save
   	   redirect_to shops_path
     else

@@ -14,8 +14,8 @@ class Shop < ApplicationRecord
         self.within_bounding_box(box)
   end
 
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+  geocoded_by :address       #GMAP
+  after_validation :geocode, if: :address_changed?    #GMAP
 
 	belongs_to :user
 	attachment :shop_image
