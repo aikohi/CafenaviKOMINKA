@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 		resources :favorites, only: [:index]  #お気に入り
 	end
 
-	namespace :admin do
+	namespace :admin do  #管理者用
     resources :users, only: [:index,:destroy]
     resources :shops, only: [:index,:destroy]
   	end

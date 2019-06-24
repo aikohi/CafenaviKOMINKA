@@ -76,6 +76,6 @@ gem "refile-mini_magick"
 gem 'dotenv-rails'
 # 論理削除用
 gem 'paranoia'
-#googleapiに使用
+#GoogleMapApiに使用、入力した住所からデータを持ってくる
 gem 'geocoder'
 
