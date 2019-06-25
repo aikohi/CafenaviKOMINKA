@@ -528,7 +528,19 @@ footer {
 }
 
  #shop-map {
- width: 100%;
+  width: 100%;
  }
 
+.balloon6 .faceicon {
+  float: none;
+}
+
+.says {
+  width: 100%;
+}
+
+.says:after {
+    top: -10px;
+    left: 42px;
+}
 }
