@@ -1,6 +1,6 @@
 <div class="shop-info">
   	<div class="shop-image">
-  		<%= attachment_image_tag @shop, :shop_image, size:'200x300',class: "card-img-top",fallback: "no_image.png"%>
+  		<%= attachment_image_tag @shop, :shop_image, size:'200x300',class: "card-img-top",fallback: "/images/no_image.png"%>
         <table class="custom_tb">
           <tbody>
             <tr>
@@ -66,7 +66,7 @@
                       <div class="balloon6">
                       	<div class="chatting">
                             	<div class="faceicon">
-                               <%= attachment_image_tag post_comment.user, :profile_image, fallback: "no_image.jpg" %>
+                               <%= attachment_image_tag post_comment.user, :profile_image, fallback: "/images/no_image.jpg" %>
                             	</div>
           					　　　　　<div class="says">
                         		  <%= post_comment.comment %>

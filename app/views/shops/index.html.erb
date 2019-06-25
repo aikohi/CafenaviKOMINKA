@@ -13,7 +13,7 @@
           <% @shops.each do |shop| %>
             <div class="col-lg-4 md-4"style="margin-bottom:50px;">
                <div class="card">
-                <%= attachment_image_tag shop, :shop_image, size:'100x250',class: "card-img-top",fallback: "no_image.png"%>
+                <%= attachment_image_tag shop, :shop_image, size:'100x250',class: "card-img-top",fallback: "/images/no_image.png"%>
                   <div class="card-body">
                    <p class="card-address"><i class="fas fa-map-marker-alt"></i><%= shop.address %></p>
                     <p class="card-title"><%= link_to shop_path(shop.id) do %><%= shop.shop_name %></p>
