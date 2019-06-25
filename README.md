@@ -9,6 +9,7 @@ With "CafenaviKOMINKA", you can search and advertise "Kominka Cafe" in Japan. 
 - [DEMO](#demo)
 - [Requirements](#requirements)
 - [Usage](#usage)
+- [Acknowledgments](#acknowledgments)
 
 ## Description
 People who want to spend calm time, feel nostalgic, and want to touch Japanese tradition can easily find "Kominka Cafe". In addition, people who started cafe management in traditional Japanese architecture can use it to advertise.   
@@ -33,4 +34,6 @@ You can use what was originally made.Replace the old part with a new one. In fac
 3. Members can advertise their own "kominka cafes".Map will be attached automatically when you enter the address.  
   会員は自分の「古民家カフェ」を宣伝できます。住所を入力すると地図が自動的に添付されます。
 
-## a
+## Acknowledgments
+Thank you to all who support me.  
+
