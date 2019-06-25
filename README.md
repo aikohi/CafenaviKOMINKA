@@ -33,4 +33,5 @@ You can use what was originally made.Replace the old part with a new one. In fac
 3. Members can advertise their own "kominka cafes".Map will be attached automatically when you enter the address.  
   会員は自分の「古民家カフェ」を宣伝できます。住所を入力すると地図が自動的に添付されます。
 
-## a
+## Acknowledgments
+
