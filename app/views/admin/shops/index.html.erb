@@ -7,7 +7,7 @@
     <% end %>
     </div>
   </div>
-	<table class="table">
+	<table class="admin-shops table">
   	 <thead>
       <tr>
 	   <th>現在宣伝中のカフェ一覧</th>
@@ -20,14 +20,14 @@
 
 		<% @shops.each do |shop| %>
 	<tr>
-	  <td>
+	  <td class="items">
        <%= attachment_image_tag shop, :shop_image, size:'100x100',fallback: "/images/no_image.png"%>
+       <p><%= shop.shop_name %></p>
     </td>
-    <td><%= shop.shop_name %></td>
-    <td>
+    <td class="items">
        <%= shop.address %>
     </td>
-    <td>
+    <td class="items">
        <%= shop.created_at %>
     </td>
 	   <td><%= link_to "詳細", shop_path(shop.id), class: "btn btn-outline-primary" %>

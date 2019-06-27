@@ -63,7 +63,7 @@
                           <%= post_comment.user.name %>さん
                           <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
                       </div>
-                      <div class="balloon6">
+                      <div class="balloon">
                       	<div class="chatting">
                             	<div class="faceicon">
                                <%= attachment_image_tag post_comment.user, :profile_image, fallback: "/images/no_image.png" %>
