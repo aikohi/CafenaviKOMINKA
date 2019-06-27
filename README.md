@@ -25,8 +25,8 @@ You can use what was originally made.Replace the old part with a new one. In fac
 ## Usage
 1. Even if you are not a member, you can search for cafes and see details.  
 会員登録していなくても、カフェを検索して詳細を見ることができます。
-2. Members can register comments and favorites.  
-  会員はコメントやお気に入り登録ができます。
+2. Members can register comments and favorites.Favorites can be registered from the store list.  
+  会員はコメントやお気に入り登録ができます。お気に入り登録は店舗一覧からでもできます。
 3. Members can advertise their own "kominka cafes".Map will be attached when you enter the address.  
   会員は自分の「古民家カフェ」を宣伝できます。住所を入力すると地図が添付されます。
 4. The administrator has the right to delete all members, stores and comments.  

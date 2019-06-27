@@ -16,10 +16,10 @@
  @import "bootstrap";
 
 
- /* Fonts */
+ /* ---Fonts---- */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
 
-/* fontawesome */
+/* ----fontawesome---- */
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
@@ -34,7 +34,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 }
 
-/* ログイン・サインアップ画面 */
+/* ---- ログイン・サインアップ画面 ---- */
 
 .main {
   color: #5e5e5e;
@@ -44,7 +44,7 @@ body {
 	padding: 50px;
 }
 
-/* Form Layout */
+/* ---- Form Layout ---- */
 .form-wrapper {
   background: #fafafa;
   margin: 3em auto;
@@ -57,7 +57,7 @@ h2 {
   padding: 1em 0;
 }
 
-/* ログイン・サインアップ・新規店鋪投稿・編集画面に使用 */
+/* ---- ログイン・サインアップ・新規店鋪投稿・編集画面に使用 ----- */
 
 form {
   padding: 0 1.5em;
@@ -112,7 +112,7 @@ form {
 }
 
 
-/* ヘッダー */
+/* ---- ヘッダー ---- */
 
 header {
   background-color: #fff;
@@ -161,7 +161,7 @@ header {
 }
 
 
-/* フッター */
+/* ---- フッター ---- */
 
 footer {
   background-color: #88cb7f;
@@ -174,7 +174,7 @@ footer {
   color: #fff;
 }
 
-/* コメントの吹き出しデザイン */
+/* ----コメントの吹き出しデザイン---- */
 
 .line-bc {
   font-size: 14px;
@@ -186,31 +186,31 @@ footer {
   list-style: none;
 }
 
-.balloon6 {
+.balloon {
   width: 100%;
   margin: 10px 0;
   overflow: hidden;
 }
 
-.balloon6 .faceicon {
+.balloon .faceicon {
   float: left;
   margin-right: -50px;
   margin-left: 20px;
   width: 70px;
 }
 
-.balloon6 .faceicon img{
+.balloon .faceicon img{
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-.balloon6 .chatting {
+.balloon .chatting {
   width: 100%;
   text-align: left;
 }
 
-.balloon6 .chatting a {
+.balloon .chatting a {
   color: #276490;
 }
 
@@ -243,7 +243,7 @@ footer {
 
 
 
-/*  店・お気に入り一覧、users/showのリボン見出し  */
+/* ----店・お気に入り一覧、users/showのリボン見出し-----  */
 
 .favorite-user-name {     /* お気に入り一覧 のユーザーネーム */
   padding: 0 0 20px 80px;
@@ -289,7 +289,7 @@ i {
 }
 
 
-/* ハンバーガーメニュー 画面425px以上は表示しない */
+/* ----ハンバーガーメニュー 画面425px以上は表示しない---- */
 
 @media only screen and (min-width:425px){
   .zdo_drawer_menu {
@@ -297,7 +297,7 @@ i {
   }
 }
 
-@media screen and (max-width:425px) {   /*  レスポンシブ対応  */
+@media screen and (max-width:425px) {   /*  レスポンシブ対応 ここから */
 
 header {
   width: 100%;
@@ -316,7 +316,7 @@ footer {
   display: none !important;
   }
 
-/* ハンバーガーメニュー */
+/* ----ハンバーガーメニュー ---- */
 
 .zdo_drawer_menu {
     display: block !important;
@@ -464,6 +464,8 @@ footer {
   }
 }
 
+/*---- top ----*/
+
 .carousel-item img {
   width: 100%;
   height: 450px;
@@ -501,6 +503,12 @@ footer {
   width: 100%;
 }
 
+/* ---- shop_index ---- */
+
+.search {
+ width: 100%;
+}
+
 .shop-index{
   width: 100%;
 }
@@ -508,6 +516,8 @@ footer {
 .shops {
   padding: 10px;
 }
+
+/* ---- shop_show ---- */
 
 .shop-info {
   width: 100%;
@@ -546,9 +556,17 @@ footer {
     left: 42px;
 }
 
+/* ---- favorite_index ---- */
+
 .favorite-user-name{
   font-size: 20px;
   padding: 15px;
+}
+
+/* ---- admin_shops_index ---- */
+
+td.items {
+    padding: 0;
 }
 
 }
