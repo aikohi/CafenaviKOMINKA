@@ -55,16 +55,14 @@
   text-align: center;
 }
 
-.photo-panel{
-  width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 100px;
+.photo-panel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
 }
 
-
-
-.col-ld-4 img {
-　width: 200px;
+.photo img {
+  width: 280px;
   height: 200px;
   margin: 18px;
   border-radius: 50%;

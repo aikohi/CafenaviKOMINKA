@@ -223,7 +223,7 @@ footer {
   background: #fbfbfb;
 }
 
-.says:after {
+.says:after {   /* 吹き出しのとがったところ */
   content: "";
   display: inline-block;
   position: absolute;
@@ -289,7 +289,7 @@ i {
 }
 
 
-/* ハンバーガーメニュー 画面425px以上は表示しない*/
+/* ハンバーガーメニュー 画面425px以上は表示しない */
 
 @media only screen and (min-width:425px){
   .zdo_drawer_menu {
@@ -410,10 +410,10 @@ footer {
     display: block;
   }
   .zdo_drawer_nav_wrapper {
-    width: 312px;
+    width: 210px;
     height: 100%;
     transition: all 0.2s;
-    transform: translate(312px);
+    transform: translate(210px);
     position: fixed;
     top: 0;
     right: 0;
@@ -429,7 +429,7 @@ footer {
       left: 32px;
     }
     .zdo_drawer_nav_wrapper {
-      transform: translate(-312px);
+      transform: translate(-210px);
       right: auto;
       left: 0;
       &.open {
@@ -466,7 +466,7 @@ footer {
 
 .carousel-item img {
   width: 100%;
-  height: 470px;
+  height: 450px;
 }
 
 .carousel-item {
@@ -489,6 +489,7 @@ footer {
 
 .infomation{
   width: 100%;
+  padding: 20px;
 }
 
 .about {
@@ -500,16 +501,12 @@ footer {
   width: 100%;
 }
 
-.photo-panel{
+.shop-index{
   width: 100%;
 }
 
-.photo {
-  padding: 50px;
-}
-
 .shops {
-  padding: 0 20px;
+  padding: 10px;
 }
 
 .shop-info {
@@ -525,6 +522,11 @@ footer {
 
 .custom_tb {
   width: 100%;
+}
+
+.text-column {
+  width: 100%;
+  padding-left: 0;
 }
 
  #shop-map {
@@ -543,4 +545,10 @@ footer {
     top: -10px;
     left: 42px;
 }
+
+.favorite-user-name{
+  font-size: 20px;
+  padding: 15px;
+}
+
 }
