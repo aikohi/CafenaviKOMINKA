@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #============================初期管理者作成======================================
-# User.create!(
-#	email: 'aaa@aaa',
-#	password: 'orgorg',
-#	name: 'オレンジ',
-#	admin: 'true',
-#  )
+ User.create!(
+	email: 'aaa@aaa',
+	password: 'orgorg',
+	name: 'オレンジ',
+	admin: 'true',
+  )
 #==============================================================================
