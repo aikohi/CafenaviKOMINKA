@@ -146,7 +146,7 @@ header {
 .main-menu nav li {
   font-family: "メイリオ", Meiryo, sans-serif;
   display: inline;
-  margin-right: 5em;
+  padding-right: 5em;
   font-size: 14px;
   text-decoration: none;
   font-weight: bold;
@@ -239,8 +239,11 @@ footer {
   padding: 0;
 }
 
+/* ---- 検索　-----  */
 
-
+.search form {
+  padding: 0 !important;
+}
 
 
 /* ----店・お気に入り一覧、users/showのリボン見出し-----  */
@@ -289,24 +292,68 @@ i {
 }
 
 
-/* ----ハンバーガーメニュー 画面425px以上は表示しない---- */
+/* ----ハンバーガーメニュー 画面768px以上は表示しない---- */
 
-@media only screen and (min-width:425px){
+@media only screen and (min-width:768px){
   .zdo_drawer_menu {
     display: none !important;
   }
 }
 
-@media screen and (max-width:425px) {   /*  レスポンシブ対応 ここから */
+
+@media screen and (max-width:1024px) {
 
 header {
   width: 100%;
-  font-size: 12px;
-  }
+}
+
+.main-menu nav li{
+  padding-right: 2em;
+}
 
 footer {
   width: 100%;
 }
+
+
+/*---- top ----*/
+
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item img {
+  display: block;
+  width: 1024px;
+}
+
+.infomation{
+  width: 100%;
+  padding: 20px;
+}
+
+.about {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.introduction {
+  width: 100%;
+  padding: 30px;
+}
+
+/* ---- shop_index ---- */
+
+.search {
+ width: 100%;
+}
+
+.shop-index{
+  width: 100%;
+}
+}
+
+@media screen and (max-width:768px) {
 
 .main-menu nav li:nth-child(1){
   display: block !important;
@@ -475,59 +522,26 @@ footer {
   height: auto;
 }
 
-.carousel-item .show-image {
+.carousel-item img {
   display: block;
-  width:100%;
-}
-.logo h1 {
-  font-size: 50px;
-}
-
-.index-button{
-  width: 300px;
-  top: 85%;
-  left: 60%;
-}
-
-.infomation{
-  width: 100%;
-  padding: 20px;
-}
-
-.about {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.introduction {
-  width: 100%;
-}
-
-/* ---- shop_index ---- */
-
-.search {
- width: 100%;
-}
-
-.shop-index{
-  width: 100%;
+  width: 768px;
 }
 
 .shops {
-  padding: 10px;
+  padding: 10px 140px;
 }
 
 /* ---- shop_show ---- */
 
 .shop-info {
   width: 100%;
-  height: 1500px;
+  height: 1300px;
 }
 
 .shop-image {
   width: 100%;
   float: none;
-  padding: 0 20px;
+  padding: 0 80px;
 }
 
 .custom_tb {
@@ -537,6 +551,10 @@ footer {
 .text-column {
   width: 100%;
   padding-left: 0;
+}
+
+.menu {
+  width: 100%;
 }
 
  #shop-map {
@@ -551,10 +569,6 @@ footer {
   width: 100%;
 }
 
-.says:after {
-    top: -10px;
-    left: 42px;
-}
 
 /* ---- favorite_index ---- */
 
@@ -568,5 +582,41 @@ footer {
 td.items {
     padding: 0;
 }
+}
 
+@media screen and (max-width:425px) {
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+}
+.logo h1 {
+  font-size: 50px;
+}
+
+.index-button{
+  width: 300px;
+  top: 85%;
+  left: 60%;
+}
+
+.shops {
+  padding: 10px;
+}
+
+.shop-image {
+  width: 100%;
+  float: none;
+  padding: 0 10px;
+}
+
+.says:after {
+    top: -10px;
+    left: 42px;
+}
+}
+@media screen and (max-width:320px) {
+.menu {
+  margin: 20px 0;
+}
 }
