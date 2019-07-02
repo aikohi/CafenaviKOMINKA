@@ -44,14 +44,13 @@
     </div>
 </div>
 <div class="comment">
-
   <%= form_for [@shop, @post_comment] do |f| %>
-      <div class="row">
-          <div class="col-sm-12">
-              <%= f.text_field :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
-          </div>
-      </div>
-      <%= f.submit "コメント送信", class: "btn btn-secondary" %>
+      <table>
+        <tr>
+          <td class="col-8"style="padding: 0;"><%= f.text_field :comment, class: "form-control",placeholder: "コメントをここに" %></td>
+          <td><%= f.submit "送信", class: "btn btn-secondary" %></td>
+        </tr>
+      </table>
   <% end %>
 
   <div class="line-bc">
