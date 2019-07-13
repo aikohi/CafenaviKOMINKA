@@ -1,12 +1,5 @@
 <sectin>
-  <div class="search">
-    <div class="form-inline">
-    <%= form_tag(admin_shops_path, :method => 'get' ) do %>
-      <%= text_field_tag :search,params[:search], class: "form-control shadow-sm",placeholder: "地域で検索　例：横浜" %>
-      <%= submit_tag ' 検索 ', :address => nil %>
-    <% end %>
-    </div>
-  </div>
+<%= render 'shops/search' %>
 	<table class="admin-shops table">
   	 <thead>
       <tr>

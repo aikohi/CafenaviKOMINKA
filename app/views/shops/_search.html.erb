@@ -1,0 +1,13 @@
+<!-------検索---------->
+<div class="search">
+  <table>
+    <tr>
+      <td>
+        <%= form_tag(shops_path, :method => 'get' ) do %>
+        <%= text_field_tag :search,params[:search], class: "form-control shadow-sm",placeholder: "地域で検索　例：横浜" %>
+      </td>
+      <td><%= submit_tag ' 検索 ', :address => nil, class: "btn-success btn-lg rounded-circle p-1 shadow-sm" %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>

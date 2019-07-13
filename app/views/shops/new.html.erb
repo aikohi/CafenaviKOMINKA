@@ -1,60 +1,6 @@
 <div class="forms">
   <div class="form-panel">
     <h2>自分の店を公開する</h2>
-    <%= form_for(@shop) do |f| %>
-
-      <div class="form-item">
-        <%= f.label :店名 %><br />
-        <%= f. text_field :shop_name %>
-      </div>
-      <div class="form-item">
-        <%= f.label :店の説明 %><br />
-        <%= f.text_area :introduction, class: "form-control" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :店の写真 %>
-        <%= f.attachment_field :shop_image, placeholder: "ファイルを選択" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :住所 %><br />
-        <%= f.text_field :address %>
-      </div>
-      <div class="form-item">
-        <%= f.label :電話番号 %><br />
-        <%= f.text_field :phone_number, placeholder: "例　123456789" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :おすすめメニュー１ %><br />
-        <%= f.text_field :first_menu, placeholder: "例　コーヒー" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :おすすめメニュー１の価格 %><br />
-        <%= f.text_field :first_price, placeholder: "税抜き価格で入力,例　500" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :おすすめメニュー２ %><br />
-        <%= f.text_field :second_menu, placeholder: "例　パンケーキ" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :おすすめメニュー２の価格 %><br />
-        <%= f.text_field :second_price, placeholder: "税抜き価格で入力,例　700" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :営業開始時間 %><br />
-        <%= f.text_field :start_time, placeholder: "例　10:00"  %>
-      </div>
-      <div class="form-item">
-        <%= f.label :営業終了時間 %><br />
-        <%= f.text_field :last_time, placeholder: "例　19:00" %>
-      </div>
-      <div class="form-item">
-        <%= f.label :定休日 %><br />
-        <%= f.text_field :holiday, placeholder: "例　月曜" %>
-      </div>
-
-      <div class="button-panel">
-        <%= f.submit "送信" , onclick: "getPosition();",class: "button-panel btn-danger" %>
-      </div>
-    <% end %>
+    <%= render 'shops/form',shop: @shop %>
   </div>
 </div>

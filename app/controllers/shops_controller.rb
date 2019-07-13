@@ -15,7 +15,7 @@ class ShopsController < ApplicationController
         latitude = params[:latitude].to_f
         longitude = params[:longitude].to_f
         @locations = Shop.within_box(0.310686, latitude, longitude)
-end
+  end
 
   def new
   	@shop = Shop.new

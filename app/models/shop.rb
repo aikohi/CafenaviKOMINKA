@@ -13,10 +13,10 @@ class Shop < ApplicationRecord
         box = Geocoder::Calculations.bounding_box(center_point, distance)
         self.within_bounding_box(box)
   end
-
-  geocoded_by :address       #GMAP
-  after_validation :geocode, if: :address_changed?    #GMAP
-
+ #----GMAP------------------
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+#----------------------------
 	belongs_to :user
 	attachment :shop_image
   has_many :post_comments, dependent: :destroy
