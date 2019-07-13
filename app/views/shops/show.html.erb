@@ -34,11 +34,9 @@
         <p><i class="far fa-check-circle"></i></i>定休日</p>
         <div class="holiday"><%= @shop.holiday %></div>
         <div class="favorite-button">
-          <% if user_signed_in? %>
-             <% if !Favorite.exists?(user_id:current_user.id, shop_id:@shop.id) %>
-                <%= link_to "お気に入り登録",shop_favorites_path(@shop),method: :post,class: "btn-warning" %>
-             <% else %>
-            <% end %>
+            <% if user_signed_in? && !Favorite.exists?(user_id:current_user.id, shop_id:@shop.id) %>
+               <%= link_to "お気に入り登録",shop_favorites_path(@shop),method: :post,class: "btn-warning" %>
+            <% else %>
           <% end %>
         </div>
     </div>
@@ -71,9 +69,9 @@
                         		  <%= post_comment.comment %>
                         		</div>
                         		<% if user_signed_in? && current_user.id == post_comment.user_id%>
-                        		<%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
+                        		  <%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
                             <% elsif user_signed_in? && current_user.admin %>
-                            <%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
+                              <%= link_to "削除", shop_post_comment_path(@shop,post_comment.id), method: :delete, "data-confirm" => "本当に削除してよろしいのですか?" %>
                         		<% end %>
                       	</div>
                       </div>
@@ -96,7 +94,6 @@
           map: map
       });
     }
-
 </script>
 <script src="//maps.googleapis.com/maps/api/js?key=<%= ENV['GMAP_KEY']%>&callback=initMap"></script>
 
