@@ -227,7 +227,9 @@ footer {
   background: #fbfbfb;
 }
 
-.says:after {   /* 吹き出しのとがったところ */
+/* ----吹き出しのとがったところ------ */
+
+.says:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -315,14 +317,16 @@ i {
   }
 }
 
-@media screen and (width:1440px) {
+/* ------------------------------------------------ */
+
+@media screen and (max-width:1440px) {
 
 header {
   width: 100%;
 }
 
 .main-menu nav li{
-  padding-right: 5em;
+  padding-right: 3.5em;
 }
 
 footer {
@@ -334,36 +338,44 @@ footer {
 }
 }
 
-@media screen and (max-width:1024px) {
-
-.main-menu nav li{
-  padding-right: 2em;
-}
-
-/*---- top ----*/
-
-.carousel-item {
-  height: auto;
-}
-
+@media screen and (max-width:1366px) {
 .carousel-item img {
-  display: block;
-  width: 1024px;
+  width: 1366px;
 }
 
 .infomation{
   width: 100%;
-  padding: 20px;
 }
 
 .about {
   width: 100%;
-  margin-top: 20px;
 }
 
 .introduction {
   width: 100%;
-  padding: 30px;
+  padding: 50px;
+}
+}
+
+@media screen and (max-width:1280px) {
+.carousel-item img {
+  width: 1280px;
+}
+}
+
+@media screen and (max-width:1200px) {
+.carousel-item img {
+  width: 1200px;
+}
+}
+
+@media screen and (max-width:1024px) {
+.main-menu nav li{
+  padding-right: 2em;
+}
+
+.carousel-item img {
+  width: 1024px;
 }
 
 /* ---- shop_index ---- */
@@ -542,11 +554,11 @@ footer {
   width: 768px;
 }
 
+/* ---- shop ---- */
+
 .shops {
   padding: 10px 140px;
 }
-
-/* ---- shop_show ---- */
 
 .shop-info {
   width: 100%;
